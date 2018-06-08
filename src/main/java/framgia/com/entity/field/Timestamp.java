@@ -1,6 +1,6 @@
-package framgia.com.entity;
+package framgia.com.entity.field;
 
-public class Timestamp implements ISqlElement {
+public class Timestamp implements IField {
 
     private final String name;
 

@@ -1,6 +1,6 @@
-package framgia.com.entity;
+package framgia.com.entity.field;
 
-public class Db2Decimal implements ISqlElement {
+public class Db2Decimal implements IField {
 
     private String name;
     private String length;

@@ -1,6 +1,6 @@
 package framgia.com.reader;
 
-import framgia.com.entity.Table;
+import framgia.com.entity.table.Table;
 
 import java.util.List;
 

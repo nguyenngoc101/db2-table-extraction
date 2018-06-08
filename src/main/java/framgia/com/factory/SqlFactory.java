@@ -1,7 +1,8 @@
 package framgia.com.factory;
 
 import framgia.com.entity.*;
-import framgia.com.reader.Row;
+import framgia.com.entity.field.*;
+import framgia.com.text.Row;
 
 public class SqlFactory {
 

@@ -1,6 +1,6 @@
-package framgia.com.entity;
+package framgia.com.entity.field;
 
-public class Db2BigInt implements ISqlElement {
+public class Db2BigInt implements IField {
 
     private String name;
 

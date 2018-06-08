@@ -1,4 +1,6 @@
-package framgia.com.entity;
+package framgia.com.entity.table;
+
+import framgia.com.entity.ISqlElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,7 @@ public class Table implements ISqlElement {
     }
 
     private String getSqlTextFields() {
-        return fields.stream().map(e ->e.getSqlText()).collect(Collectors.joining(", "));
+        return fields.stream().map(e -> e.getSqlText()).collect(Collectors.joining(", "));
     }
 
     public List<ISqlElement> getFields() {

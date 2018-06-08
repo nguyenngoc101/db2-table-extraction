@@ -1,12 +1,33 @@
-package framgia.com.reader;
+package framgia.com.text;
 
-public class Row {
+import static framgia.com.reader.ColumnDefinition.*;
+import static framgia.com.util.StringUtils.nomarlizeColType;
+
+public class Row implements IRow {
+
+    private String strRow;
     private String name;
     private String tableName;
     private String colType;
     private String nulls;
     private String length;
     private String scale;
+
+    public Row(String strRow) {
+        this.strRow = strRow;
+    }
+
+    @Override
+    public IRow row() {
+        String[] cols = this.strRow.split(",");
+        this.name = nomarlizeColType(cols[COL_NAME]);
+        this.tableName = nomarlizeColType(cols[TABLE_NAME]);
+        this.colType = nomarlizeColType(cols[COL_TYPE]);
+        this.nulls = nomarlizeColType(cols[COL_NULL]);
+        this.length = nomarlizeColType(cols[COL_LENGTH]);
+        this.scale = nomarlizeColType(cols[COL_SCALE]);
+        return this;
+    }
 
     public String getName() {
         return name;

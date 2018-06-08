@@ -1,7 +1,6 @@
-package framgia.com.entity;
+package framgia.com.entity.field;
 
-public class Varchar implements ISqlElement {
-
+public class Varchar implements IField {
 
     private final String name;
     private final Integer length;
