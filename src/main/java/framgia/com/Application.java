@@ -8,7 +8,6 @@ import java.util.List;
 public class Application {
     public static void main(String[] args) {
         CsvReader csvReader = new CsvReader();
-
         List<Table> tables = csvReader.read();
         System.out.println("Total tables: "+tables.size());
 
