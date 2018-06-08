@@ -44,7 +44,7 @@ public class CsvReader implements IReader {
     }
 
     public List<Row> getRowsFromRawText(List<String> rawRows) {
-        return rawRows.stream().filter(e -> e.contains("DB2INST1")).map(Row::new).collect(toList());
+        return rawRows.stream().filter(e -> e.contains("DB2INST1")).map(e -> new Row(e).row()).collect(toList());
     }
 
     public Map<String, List<Row>> convertRowsToTable(List<Row> rows) {

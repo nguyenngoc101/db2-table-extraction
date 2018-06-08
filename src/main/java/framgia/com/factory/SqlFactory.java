@@ -68,7 +68,7 @@ public class SqlFactory {
         }
     }
 
-    private static ISqlElement ifNotNullField(ISqlElement field, String nullType) {
+    private static IField ifNotNullField(IField field, String nullType) {
         return "N".equals(nullType) ? new NotNullField(field) : field;
     }
 }

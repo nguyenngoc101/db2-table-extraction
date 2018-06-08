@@ -3,7 +3,7 @@ package framgia.com.text;
 import static framgia.com.reader.ColumnDefinition.*;
 import static framgia.com.util.StringUtils.nomarlizeColType;
 
-public class Row implements IRow {
+public class Row {
 
     private String strRow;
     private String name;
@@ -17,8 +17,7 @@ public class Row implements IRow {
         this.strRow = strRow;
     }
 
-    @Override
-    public IRow row() {
+    public Row row() {
         String[] cols = this.strRow.split(",");
         this.name = nomarlizeColType(cols[COL_NAME]);
         this.tableName = nomarlizeColType(cols[TABLE_NAME]);
